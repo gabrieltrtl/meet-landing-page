@@ -1,0 +1,62 @@
+@import'utilities';
+
+
+// MY CSS RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Project Start
+
+body {
+  min-height: 100vh;
+}
+
+.header {
+  padding-top: 48px;
+  padding-bottom: 54px;
+  @include device(tablet) {
+    padding-bottom: 64px;
+  }
+  @include device(desktop) {
+    padding-top: 80px;
+    padding-bottom: 61px;
+  }
+}
+
+.header__logo {
+  margin: 0 auto;
+}
+
+.intro {
+  
+}
+
+.intro__img-left {
+ 
+}
+
+.intro__content {
+  
+}

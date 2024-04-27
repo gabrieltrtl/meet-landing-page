@@ -1,0 +1,42 @@
+// Media Query
+@mixin device($device) {
+  @if $device == tablet {
+    @media (min-width: 43.75rem) {
+      @content;
+    }
+  }  
+  @else if $device == desktop {
+    @media (min-width: 75rem) {
+      @content;
+    }
+  }
+}
+
+// Colors
+$color1: #FAFAFA;
+$color2: #87879D;
+$color3: #28283D;
+$color4: #855FB1;
+$color5: #D9B8FF;
+$color6: #8FE3F9;
+$color7: #4D96A9;
+
+
+
+
+// Typography
+
+$fonts: (
+  "$xsmall": 16px,
+  "$small": 18px,
+  // "$medium1": 20px,
+  // "$medium2": 24px,
+  "$medium": 32px,
+  "$large1": 40px,
+  "$large2": 48px,
+  "$large3": 64px,
+);
+
+// Buttons
+
+
