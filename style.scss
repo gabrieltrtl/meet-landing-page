@@ -31,11 +31,14 @@ a {
 
 body {
   min-height: 100vh;
+  font-family: "Red Hat Display", sans-serif;
 }
+
+// Header
 
 .header {
   padding-top: 48px;
-  padding-bottom: 54px;
+  padding-bottom: 61px;
   @include device(tablet) {
     padding-bottom: 64px;
   }
@@ -49,14 +52,323 @@ body {
   margin: 0 auto;
 }
 
-.intro {
-  
+// First Section (Intro)
+
+.container {
+  overflow-x: clip;
 }
 
-.intro__img-left {
- 
+.intro {
+  @include device(desktop) {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.intro__img-desktop-left,
+.intro__img-desktop-right {
+  display: none;
+  @include device(desktop) {
+    display: block;
+  }
+}
+
+.intro__img-desktop-left {
+  position: relative;
+  left: -32px;
+}
+
+.intro__img-desktop-right {
+  order: 3;
+  position: relative;
+  right: -32px;
+}
+
+.intro__img {
+  scale: 1.104;
+  margin-bottom: 55px;
+  @include device(tablet) {
+    margin: 0 auto 87px auto;
+  }
+  @include device(desktop) {
+    display: none;
+  }
 }
 
 .intro__content {
+  text-align: center;
+  max-width: 327px;
+  margin: 0 auto;
+  @include device(tablet) {
+    max-width: 440px;
+  }
+  @include device(desktop) {
+    max-width: 540px;
+  }
+}
+
+.intro__title {
+  font-size: map-get($fonts, "$large1");
+  line-height: 1.1;
+  color: $color3;
+  margin-bottom: 24px;
+  @include device(desktop) {
+    margin-bottom: 34px;
+    font-size: map-get($fonts, "$large2");
+  }
+  @include device(desktop) {
+    font-size: map-get($fonts, "$large3");
+  }
+}
+
+.intro__text {
+  line-height: 1.625;
+  color: $color2;
+  margin-bottom: 32px;
+  @include device(desktop) {
+    font-size: map-get($fonts, "$small");
+    line-height: 1.45;
+  }
+}
+
+.intro__btn {
+  background-color: $color7;
+  margin-bottom: 16px;
+  span {
+    color: $color6;
+  }
+  @include device(tablet) {
+    display: inline-block;
+    margin: 0 16px 0 0;
+  }  
+  @include device(desktop) {
+    &:hover {
+      background-color: #71C0D4;
+    }
+  }
+}
+
+.intro__link {
+  line-height: 1.625;
+  background-color: $color4;
+  color: $color0;
+  padding: 16px 29px;
+  border-radius: 29px;
+  font-weight: 900;
+  display: inline-block;
+  @include device(desktop) {
+    &:hover {
+      background-color: #B18BDD;
+    }
+  }
+}
+
+.intro__btn,
+.intro__link {
+  cursor: pointer;
+}
+
+.intro__number {
+  display: block;
+  border-radius: 50%;
+  border: 1px solid hsla(239, 10%, 57%, 0.25);
+  color: $color2;
+  max-width: 56px;
+  line-height: 1.625;
+  font-weight: 900;
+  padding: 14px 19px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 148px auto 64px auto;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 84px;
+    width: 1px;
+    top: -84px;
+    background-color: hsla(239, 10%, 57%, 0.25);
+    transform: translateX(-50%);
+  }
+  @include device(tablet) {
+    margin: 164px auto 67px auto;
+  }
+  @include device(desktop) {
+    margin: 194px auto 64px auto;
+  }
+}
+
+// Second Section (Gallery)
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 25px;
+  padding: 0 24px;
+  margin-bottom: 64px;
+  img {
+    border-radius: 12px;
+  }
+  @include device(tablet) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 11px;
+    padding: 0 40px;
+    margin-bottom: 48px;
+  }
+  @include device(desktop) {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: initial;
+    gap: 30px;
+    margin-bottom: 80px;
+  }
+}
+
+// Third Section (features)
+
+.features {
+  text-align: center;
+  padding: 0 24px;
+  margin-bottom: 176px;
+  @include device(tablet) {
+    max-width: 573px;
+    margin: 0 auto 192px auto;
+  }
+  @include device(desktop) {
+    margin: 0 auto 184px auto;
+  }
+}
+
+.features__subtitle {
+  color: $color7;
+  font-weight: 900;
+  line-height: 1.625;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+  @include device(tablet) {
+    margin-bottom: 16px;
+  }
+}
+
+.features__title {
+ font-weight: 900;
+ font-size: map-get($fonts, "$medium");
+ line-height: 1.125;
+ color: $color3;
+ margin-bottom: 32px;
+ @include device(tablet) {
+ font-size: map-get($fonts, "$large1");
+ }
+}
+
+.features__text {
+  color: $color2;
+  line-height: 1.625;
+  @include device(desktop) {
+ font-size: map-get($fonts, "$small");
+
+  }
+}
+
+// Footer
+
+.footer {
+  position: relative;
+  background-image: linear-gradient(rgba(77, 150, 169, 0.9), rgba(77, 150, 169, 0.9)), url(./assets/mobile/image-footer.jpg);
+  background-size: cover;
+  text-align: center;
+  color: $color1;
+  padding: 0 24px 72px 24px;
+  @include device(tablet) {
+    background-image: linear-gradient(rgba(77, 150, 169, 0.9), rgba(77, 150, 169, 0.9)), url(./assets/tablet/image-footer.jpg);
+    padding: 0 97px 66px 97px;
+  }
+  @include device(desktop) {
+    padding: 0 0 116px 0;
+
+  }
+}
+
+.footer__number {
+  display: block;
+  border: 1px solid hsla(239, 10%, 57%, 0.25);
+  color: $color2;
+  border-radius: 50%;
+  max-width: 56px;
+  line-height: 1.625;
+  font-weight: 900;
+  padding: 14px 19px;
+  margin-bottom: 36px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #FFFFFF;
+  left: 50%;
+  top: -28px;
+  transform: translateX(-50%);
+  &::before {
+    content: "";
+    position: absolute;
+    height: 84px;
+    width: 1px;
+    top: -84px;
+    background-color: hsla(239, 10%, 57%, 0.25);
+    transform: translateX(-50%);
+  }
+  @include device(desktop) {
+    margin-bottom: 60px;
+  }
+}
+
+.footer__content {
+  display: flex;
+  max-width: 1110px;
+  align-items: center;
+  justify-content: center;
+  gap: 92px;
+  @include device(desktop) {
+    margin: 0 auto;
+  }
+}
+
+.footer__title {
+font-weight: 900;
+ font-size: map-get($fonts, "$medium");
+ line-height: 1.125;
+ margin-bottom: 24px;
+ @include device(desktop) {
+  text-align: left;
+  margin: initial;
+ }
+}
+
+.footer__text {
+  font-size: map-get($fonts, "$small");
+  color: $color1;
+  line-height: 1.45;
+  margin-bottom: 32px;
+  @include device(tablet) {
+    margin-bottom: 40px;
+  }
+  @include device(desktop) {
+    margin: initial;
+    max-width: 350px;
+    text-align: left;
+  }
+}
+
+.footer__btn {
+  background-color: $color4;
+  span {
+    color: $color5;
+  }
+  @include device(desktop) {
+    margin: initial;
+    flex-shrink: 0;
+    &:hover {
+      background-color: #B18BDD;
+    }
+  }
   
 }

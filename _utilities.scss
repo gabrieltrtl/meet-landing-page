@@ -13,6 +13,7 @@
 }
 
 // Colors
+$color0: #FFFFFF;
 $color1: #FAFAFA;
 $color2: #87879D;
 $color3: #28283D;
@@ -39,4 +40,14 @@ $fonts: (
 
 // Buttons
 
-
+.btn {
+  border: none;
+  display: block;
+  padding: 16px 40px;
+  border-radius: 29px;
+  line-height: 1.625;
+  color: $color0;
+  font-weight: 900;
+  margin: 0 auto;
+  
+}
