@@ -361,16 +361,14 @@ body {
   }
 }
 
-.footer__content {
-  display: flex;
-  max-width: 69.375rem;
-  align-items: center;
-  justify-content: center;
-  gap: 92px;
-}
 @media (min-width: 75rem) {
   .footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
+    max-width: 1110px;
+    gap: 92px;
   }
 }
 
