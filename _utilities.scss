@@ -28,14 +28,14 @@ $color7: #4D96A9;
 // Typography
 
 $fonts: (
-  "$xsmall": 16px,
-  "$small": 18px,
+  "$xsmall": 1rem,
+  "$small": 1.125rem,
   // "$medium1": 20px,
   // "$medium2": 24px,
-  "$medium": 32px,
-  "$large1": 40px,
-  "$large2": 48px,
-  "$large3": 64px,
+  "$medium": 2rem,
+  "$large1": 2.5rem,
+  "$large2": 3rem,
+  "$large3": 4rem,
 );
 
 // Buttons
@@ -43,7 +43,7 @@ $fonts: (
 .btn {
   border: none;
   display: block;
-  padding: 16px 40px;
+  padding: 1rem 2.5rem;
   border-radius: 29px;
   line-height: 1.625;
   color: $color0;
